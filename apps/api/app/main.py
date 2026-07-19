@@ -1,7 +1,19 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Clipper AI Pro API")
+app = FastAPI(
+    title="Clipper AI Pro API",
+    version="0.1.0"
+)
 
 @app.get("/")
-def root():
-    return {"message": "Clipper AI Pro API is running"}
+async def root():
+    return {
+        "status": "ok",
+        "service": "Clipper AI Pro API"
+    }
+
+@app.get("/health")
+async def health():
+    return {
+        "healthy": True
+    }

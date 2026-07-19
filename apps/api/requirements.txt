@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+sqlalchemy
+asyncpg
+redis
+celery
+python-dotenv
